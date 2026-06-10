@@ -13,4 +13,4 @@
 ### 元ネタ
 
 - [hardikpandya/stop-slop](https://github.com/hardikpandya/stop-slop) — 構造とフロントマター形式
-- noteの記事「その文章、AIに書かせただろ」(だいち | GENSHI AI) — 日本語パターンの分類と実例
+- [noteの記事「その文章、AIに書かせただろ」](https://note.com/ikora/n/n0bbb2828b91e) (だいち | GENSHI AI) — 日本語パターンの分類と実例

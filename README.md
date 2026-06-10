@@ -37,7 +37,7 @@ API: `SKILL.md` をシステムプロンプトに含める。
 ## クレジット
 
 - 着想元: [hardikpandya/stop-slop](https://github.com/hardikpandya/stop-slop)
-- 日本語パターンの整理と実例: noteの記事「その文章、AIに書かせただろ」(だいち | GENSHI AI)
+- 日本語パターンの整理と実例: [noteの記事「その文章、AIに書かせただろ」](https://note.com/ikora/n/n0bbb2828b91e) (だいち | GENSHI AI)
 
 ## ライセンス
 
