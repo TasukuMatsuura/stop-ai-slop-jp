@@ -2,13 +2,26 @@ English | [日本語](README.md)
 
 # Stop AI Slop (Japanese Edition)
 
-A Claude Skill for removing AI tells from Japanese prose. Japanese-language port of [hardikpandya/stop-slop](https://github.com/hardikpandya/stop-slop).
+A Claude Skill for removing AI tells from Japanese prose.
+
+This is the Japanese-language port of [hardikpandya/stop-slop](https://github.com/hardikpandya/stop-slop).
 
 > The skill content (`SKILL.md`, `references/*.md`) is written in Japanese. This English README exists for discoverability. If you write in Japanese with the help of an LLM, this is for you.
 
-## What this is
+## What it is for
 
-AI-written Japanese has predictable patterns. Vocabulary, structure, rhythm. This skill teaches Claude (or any LLM) to catch and remove them. It covers Japanese-specific tells: false agency, 必殺技造語 (grandiose Sino-Japanese compounds used to inflate small stories), 命題型H2 (proposition-style headings borrowed from English SEO blogs), 両論併記 (both-sides-ism), and 書き手の不在 (the absence of a real writer behind the prose).
+Use this before publishing Japanese text drafted with an LLM.
+
+It catches things like:
+
+- Missing human agency: 課題が浮き彫りになる, 文化が醸成される
+- Overbuilt headings: ○○が私たちに教えてくれること
+- Small personal stories inflated into 真理, 美学, 境地
+- Repeated structures: AではなくBだ, 3つの観点から
+- Paragraphs with the same length, tone, and landing
+- Full-width dashes, gratuitous 「」, leftover `**`, decorative emoji
+
+The core problem is not the vocabulary list. It is prose with no visible writer. The skill pushes the model back toward who saw what, what bothered them, and what they are willing to say.
 
 ## Skill structure
 
@@ -42,17 +55,35 @@ git clone https://github.com/iKora128/stop-ai-slop-jp <project>/.claude/skills/s
 
 ## How to use
 
-Before drafting, answer SKILL.md's three opening questions: what are you committing to, is there a falsifiable claim, how does this differ from the average article on this topic. After drafting, work the priority list top-down: stance → false agency → structure → vocabulary → symbols. For review, run the quick check.
+Before drafting, answer three questions:
+
+- What are you willing to say plainly?
+- Is the claim concrete enough to argue against?
+- How is this different from the average article on the same topic?
+
+After drafting, revise in this order:
+
+1. Stance: what does the piece actually claim?
+2. Agency: who did what?
+3. Structure: headings, paragraphs, reversals, three-item lists
+4. Vocabulary: AI-favored nouns, grandiose compounds, IT metaphors
+5. Symbols: dashes, stray brackets, emoji, Markdown residue
 
 Reading aloud catches the most. Patterns the eye misses surface immediately when spoken: uniform rhythm, breath-killing long sentences, monotone endings.
 
-## What it catches
+## What's inside
 
-**Banned phrases** — old-style templates, throat-clearing openers, AI-favored abstract nouns (本質, 解像度, 文脈, …), grandiose Sino-Japanese compounds (真理, 虚飾, 禁欲的, …), IT-as-metaphor borrowings (思考のOSをアップデート, 人生をハック, …), hedges, conclusion avoidance, decorative emoji sprinkling. See `references/phrases.md`.
+**SKILL.md**  
+Principles, core rules, quick checks, and scoring.
 
-**Structural clichés** — false agency, proposition-style headings, hook-and-reversal openers, Wikipedia-style sentence compression, lack of variance, template repetition (体験 → quote → abstraction), binary contrasts (Not X. It's Y.), negative listing, dramatic fragmentation, both-sides-ism, missing edge. See `references/structures.md`.
+**references/phrases.md**  
+Words and phrases to consider removing: AI-favored nouns, translationese, hedges, IT metaphors, emoji.
 
-**Symbol- and sentence-level** — full-width dashes (──), gratuitous Japanese corner brackets 「」, three-item parallelism, adverb stacking, `**` residue, decorative emoji.
+**references/structures.md**  
+Deeper patterns: false agency, proposition-style H2s, hook-and-reversal openings, uniform rhythm, both-sides-ism.
+
+**references/examples.md**  
+Before/after examples showing how to rewrite actual passages.
 
 ## Scoring
 
@@ -69,7 +100,7 @@ Rate 1–10 on each dimension. Below 35/50: revise.
 ## Credits
 
 - Inspired by: [hardikpandya/stop-slop](https://github.com/hardikpandya/stop-slop)
-- Japanese pattern catalog and worked examples: [note article "その文章、AIに書かせただろ"](https://note.com/ikora/n/n0bbb2828b91e) (だいち | GENSHI AI)
+- Japanese pattern catalog and worked examples: [note "その文章、AIに書かせただろ"](https://note.com/ikora/n/n0bbb2828b91e) (だいち | GENSHI AI)
 
 ## Author
 
