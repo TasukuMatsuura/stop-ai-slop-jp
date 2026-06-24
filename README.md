@@ -6,6 +6,8 @@
 
 [hardikpandya/stop-slop](https://github.com/hardikpandya/stop-slop) の日本語版です。
 
+> **このリポジトリは [iKora128/stop-ai-slop-jp](https://github.com/iKora128/stop-ai-slop-jp) のフォークです。** 汎用の文章作法のみを扱い、社内固有の例・用語・機密情報は含めません(公開リポのため)。
+
 ## AI Slopとは
 
 生成AIを用いて大量生産された、低品質で中身を伴わないコンテンツを指す俗語です。
